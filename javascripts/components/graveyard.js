@@ -12,11 +12,14 @@ const buildGraveyard = () => {
   //build domString, then call printToDom function, then export buildGraveyard function
   let domString = '';
   domString += '<div class="card">';
-  domString += '<div class="card-header">Graveyard</div>';
+  domString += '<div class="card-header">GRAVEYARD</div>';
   domString += '<ul class="list-group list-group-flush">';
 
   deadPeople.forEach((person) => {
-    domString += `<li class="list-group-item">${person.name}  </li>`;
+    domString += `<li class="list-group-item"><s>${person.name}</s>`    
+    domString += `<button id=${person.id} class="btn btn-primary revive-me">
+    Revive Me! 
+  </button></li>`;
   });
 
   domString += '</ul>';
