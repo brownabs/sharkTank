@@ -22,10 +22,10 @@ const persons = [
   { id: 'person18', name: 'Michele Rawlins', isDead: false },
   { id: 'person19', name: 'Monique Bass', isDead: false },
   { id: 'person20', name: 'Ola Oladinni', isDead: false },
-  { id: 'person21', name: 'Sarah Holder', isDead: true },
-  { id: 'person22', name: 'Stephen Castaneda', isDead: true },
-  { id: 'person23', name: 'Steven Zelenak', isDead: true },
-  { id: 'person24', name: 'Todd Spainhour', isDead: true },
+  { id: 'person21', name: 'Sarah Holder', isDead: false },
+  { id: 'person22', name: 'Stephen Castaneda', isDead: false },
+  { id: 'person23', name: 'Steven Zelenak', isDead: false },
+  { id: 'person24', name: 'Todd Spainhour', isDead: false },
   { id: 'person25', name: 'Zac Crumpton', isDead: true }
 ];
 
@@ -36,10 +36,7 @@ const retrieveAlivePeople = () => {
 
 }
 
-console.log(retrieveAlivePeople())
-
 //function to retrieve dead people
-
 const retrieveDeadPeople = () => {
   return persons.filter((p) => p.isDead === true)
 }
@@ -47,7 +44,7 @@ const retrieveDeadPeople = () => {
 const retrieveDeadPersonById = (id) => {
   return persons.filter((p) => p.id === id)
 }
-console.log(retrieveDeadPersonById(1))
+console.log(retrieveDeadPersonById("person1"))
 //function to kill people by shark attack
 // this function only kills people who are alive
 
@@ -59,8 +56,11 @@ const randomSharkAttack = () => {
   persons[deadMan].isDead = true;
 }
 
-const reviveDeadPerson = () => {
-  const deadPerson = retrieveDeadPersonById
+  //make the dead person in the alive person list
+  //boolean needs to be changed from is Dead to false
+const reviveDeadPerson = (deadPersonsId) => {
+  const personToRevive = persons.findIndex((p) => p.id === deadPersonsId);
+  persons[personToRevive].isDead = false;
 }
 
-export default { retrieveAlivePeople, retrieveDeadPeople, randomSharkAttack };
+export default { retrieveAlivePeople, retrieveDeadPeople, randomSharkAttack, reviveDeadPerson };
