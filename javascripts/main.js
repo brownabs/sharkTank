@@ -2,7 +2,7 @@ import tank from './components/tank.js';
 import graveyard from './components/graveyard.js';
 import personData from './helpers/data/personData.js';
 
-//you will need to import all of the 
+//shark attack function and then must reprint home page 
 const sharkAttackEvent = () => {
   personData.randomSharkAttack();
    //randomly kill someone in personData
@@ -31,7 +31,7 @@ const init = () => {
 
 init()
 
-// DEAD TO US:
+// DO NOT USE in vanilla JS from now on
 // document.getElementById
 // document.getElementsByClassName
 // document.ANYTHING
