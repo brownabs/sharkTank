@@ -49,7 +49,9 @@ console.log(retrieveDeadPersonById("person1"))
 // this function only kills people who are alive
 
 const randomSharkAttack = () => {
+  //get all the alive people - call on that function
   const alivePeople = retrieveAlivePeople();
+  //need to use Math.floor to make Math.random into a integer(whole number)
   const randomNum = Math.floor(Math.random() * alivePeople.length);
   const deadPersonsId = alivePeople[randomNum].id;  //person7
   const deadMan = persons.findIndex((x) => x.id === deadPersonsId);
