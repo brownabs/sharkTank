@@ -2,7 +2,11 @@
 Set background-color: #fff; on the body, so must use !important to override bootstrap background color */
 
 body {
-  background-color: lightblue !important;
+  background-color: black !important;
+  background-image: url("/images/sharkImage.jpeg");
+}
+h1 {
+  font-size: 5em !important
 }
 
 #bite-me {
@@ -15,27 +19,58 @@ body {
   justify-content: center;
 }
 
-.creating-background {
-  background-color: black;
-  padding: 10px;
-  margin: 15px 15px;
-}
 .row {
   display: flex;
   justify-content: center;
   padding: 10px;
 }
 
+.card {
+  min-height: 300px
+}
+
 #bite-me {
   padding: 20px !important;
   margin: 20px 20px;
+  border-radius: 30px;
 }
 
 .card-header {
   padding: 20px !important;
   margin: 10px 10px !important;
+  background-color: rgb(206, 236, 247) !important;
+}
+
+.creating-background {
+  background-color: black;
+  opacity: 90%;
+  width: 60%;
+  margin-left: 20%;
+  padding: 30px;
+  border-radius: 20px;
 }
 
 .revive-me {
   margin: 10px 10px;
+}
+
+img {
+  min-width: 300px;
+  border-radius: 30px;
+}
+
+#pageTitle {
+ color: rgb(206, 236, 247); 
+ width: 100%;
+}
+
+#tank {
+height: 300px;
+overflow: scroll;
+}
+
+#graveyard {
+height: 300px;
+overflow: scroll;
+min-height: 300px;
 }
